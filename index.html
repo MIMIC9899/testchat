@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Социальная сеть</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-100">
+    <nav class="bg-white shadow-lg fixed w-full top-0 z-10">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between items-center py-3">
+                <div class="flex space-x-7">
+                    <button class="py-2 px-4 text-gray-500 hover:text-blue-600 transition" 
+                            onclick="showSection('feed')">
+                        🏠 Лента
+                    </button>
+                    <button class="py-2 px-4 text-gray-500 hover:text-blue-600 transition"
+                            onclick="showSection('profile')">
+                        👤 Профиль
+                    </button>
+                    <button class="py-2 px-4 text-gray-500 hover:text-blue-600 transition"
+                            onclick="showSection('search')">
+                        🔍 Поиск
+                    </button>
+                    <button class="py-2 px-4 text-gray-500 hover:text-blue-600 transition"
+                            onclick="showSection('chats')">
+                        💬 Чаты
+                    </button>
+                    <button class="py-2 px-4 text-gray-500 hover:text-blue-600 transition"
+                            onclick="showSection('settings')">
+                        ⚙️ Настройки
+                    </button>
+                </div>
+                <button class="py-2 px-4 text-red-500 hover:text-red-700 transition"
+                        onclick="logout()">
+                    Выйти
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div id="content" class="max-w-6xl mx-auto mt-20 px-4 py-8"></div>
+    
+    <!-- Остальные скрипты -->
+</body>
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.0.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.2/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.2/firebase-firestore-compat.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

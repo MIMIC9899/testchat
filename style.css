@@ -1,0 +1,41 @@
+
+
+body {
+    background-color: #f0f2f5;
+    font-family: 'Inter', sans-serif;
+}
+.loading-spinner {
+    border-top: 2px solid #3b82f6;
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+    animation: spin 0.9s ease-in-out infinite;
+    margin: auto auto;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+.fade-in {
+    animation: fadeIn 0.5s ease-in;
+}
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(2px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+.post, .chat-list > div, .chat-window, .auth-form { /*?*/
+    transition: all 0.2s ease-in-out;
+}
+.post:hover, .chat-list > div:hover { /*!*/
+    transform: translateY(-2px);
+}
+button {
+    transition: background-color 0.2s ease-in-out, transform 0.1s ease-in-out;
+}
+button:hover {
+    transform: scale(1.05);
+}
+button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
